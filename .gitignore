@@ -1,0 +1,19 @@
+# Terraform provider downloads
+.terraform/
+**/.terraform/
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Terraform executable and provider binaries
+terraform.exe
+terraform-provider-*.exe
+
+# Sensitive variable files
+terraform.tfvars
+*.auto.tfvars
+
+# Crash logs
+crash.log
+crash.*.log

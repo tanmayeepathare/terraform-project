@@ -1,0 +1,31 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.0"
+    }
+  }
+}
+
+# Configure the AWS Provider
+provider "aws" {
+  region = "ap-south-1"
+}
+
+# Create a VPC
+resource "aws_vpc" "example" {
+  cidr_block = "10.0.0.0/16"
+}
+
+
+resource "aws_instance" "example" {
+    ami = "ami-01a00762f46d584a1"
+    instance_type = "t3.micro"
+    subnet_id = "subnet-0227a5685fb090f6c"
+
+    tags = {
+        Name = "HelloWorld"
+     }
+    
+  
+}
