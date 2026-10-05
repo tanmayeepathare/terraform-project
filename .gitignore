@@ -17,3 +17,6 @@ terraform.tfvars
 # Crash logs
 crash.log
 crash.*.log
+modules-tf/.terraform/
+modules-tf/*.tfstate
+modules-tf/*.tfstate.*
